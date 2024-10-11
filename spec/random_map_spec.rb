@@ -20,7 +20,7 @@ RSpec.describe RandomMap do
       end
 
       context "when passed values" do
-        let(:map) { described_class.new(rows, cols) }
+        let(:map) { described_class.new(rows: rows, cols: cols) }
         let(:rows) { 8 }
         let(:cols) { 32 }
 
@@ -35,7 +35,7 @@ RSpec.describe RandomMap do
     end
 
     describe "#generate" do
-      let(:map) { described_class.new(rows, cols) }
+      let(:map) { described_class.new(rows: rows, cols: cols) }
       let(:rows) { 5 }
       let(:cols) { 5 }
 

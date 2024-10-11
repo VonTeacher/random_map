@@ -4,6 +4,7 @@
 # Main file of the random map generator gem
 
 require_relative "random_map/version"
+require_relative "random_map/icons"
 
 module RandomMap
   class Error < StandardError; end
@@ -14,8 +15,8 @@ module RandomMap
     attr_reader :rows, :cols
 
     def initialize(rows: 12, cols: 48)
-      @rows = rows
-      @cols = cols
+      @rows = (ARGV.shift || rows).to_i
+      @cols = (ARGV.shift || cols).to_i
     end
 
     def generate
@@ -49,3 +50,5 @@ module RandomMap
     end
   end
 end
+
+RandomMap::Map.new.generate
