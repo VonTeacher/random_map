@@ -20,7 +20,7 @@ RSpec.describe RandomMap do
       end
 
       context "when passed values" do
-        let(:map) { described_class.new(rows:, cols:) }
+        let(:map) { described_class.new(rows, cols) }
         let(:rows) { 8 }
         let(:cols) { 32 }
 
@@ -35,12 +35,22 @@ RSpec.describe RandomMap do
     end
 
     describe "#generate" do
-      let(:map) { described_class.new(rows:, cols:) }
-      let(:rows) { 10 }
-      let(:cols) { 40 }
+      let(:map) { described_class.new(rows, cols) }
+      let(:rows) { 5 }
+      let(:cols) { 5 }
 
-      it "outputs row and col data" do
-        expect { map.generate }.to output("rows 10, cols 40").to_stdout
+      it "generates a random map" do
+        expect { map.generate }.to output(
+          <<~MAP
+            ┌┬┬┬┬┬┐
+            │     │
+            │     │
+            │     │
+            │     │
+            │     │
+            └┬┬┬┬┬┘
+          MAP
+        ).to_stdout
       end
     end
   end
