@@ -1,3 +1,5 @@
+![](https://github.com/VonTeacher/random_map/actions/workflows/main.yml/badge.svg)
+
 # RandomMap
 
 TODO: Delete this and the text below, and describe your gem
