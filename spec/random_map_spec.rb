@@ -5,7 +5,11 @@ RSpec.describe RandomMap do
     expect(RandomMap::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  describe RandomMap::Map do
+    describe "#generate" do
+      it "outputs some text" do
+        expect { described_class.new.generate }.to output("We made a map").to_stdout
+      end
+    end
   end
 end

@@ -4,5 +4,12 @@ require_relative "random_map/version"
 
 module RandomMap
   class Error < StandardError; end
-  # Your code goes here...
+
+  class Map
+    def initialize; end
+
+    def generate
+      print "We made a map"
+    end
+  end
 end
