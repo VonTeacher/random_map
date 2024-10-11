@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "random_map"
+require "random_map/icons"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
